@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+
+void main(void)
+{
+
+printf("Privet_PRU\n\r");
+}

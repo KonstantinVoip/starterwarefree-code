@@ -1,0 +1,1064 @@
+******************************************************************************
+                  TI ARM Linker PC v5.1.6                      
+******************************************************************************
+>> Linked Mon Aug 17 11:17:19 2015
+
+OUTPUT FILE NAME:   <../../../../../../../binary/armv7a/cgt_ccs/am335x/beaglebone/usb_dev_msc/Debug/usb_dev_msc.out>
+ENTRY POINT SYMBOL: "Entry"  address: 80000000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  DDR_MEM               80000000   07ffffff  0106c3bc  06f93c43  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+80000000    80000000    0001030c   0001030c    r-x
+  80000000    80000000    000000d4   000000d4    r-x .text:Entry
+  800000d4    800000d4    0000ff68   0000ff68    r-x .text
+  8001003c    8001003c    000002d0   000002d0    r-- .const
+8001030c    8001030c    000000a8   000000a8    rw-
+  8001030c    8001030c    000000a8   000000a8    rw- .data
+87fffff0    87fffff0    00000008   00000000    rw-
+  87fffff0    87fffff0    00000008   00000000    rw- .stack
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text:Entry 
+*          0    80000000    000000d4     
+                  80000000    000000c8     system.lib : init.obj (.text:Entry)
+                  800000c8    0000000c     rtsv7A8_A_le_v3_eabi.lib : auto_init.obj (.tramp.__TI_auto_init.1)
+
+.text      0    800000d4    0000ff68     
+                  800000d4    00002234     usblib.lib : usbdenum.obj (.text)
+                  80002308    000021d8     drivers.lib : cppi41dma.obj (.text)
+                  800044e0    00001f90                 : usb.obj (.text)
+                  80006470    00001d10                 : uart_irda_cir.obj (.text)
+                  80008180    00001c1c     usblib.lib : usbdmsc.obj (.text)
+                  80009d9c    000019f8     utils.lib : uartStdio.obj (.text)
+                  8000b794    00000830     usblib.lib : usbdconfig.obj (.text)
+                  8000bfc4    00000780     platform.lib : dmtimer.obj (.text)
+                  8000c744    0000069c     drivers.lib : dmtimer.obj (.text)
+                  8000cde0    00000638     utils.lib : ascii.obj (.text)
+                  8000d418    00000544     usblib.lib : usbdcdesc.obj (.text)
+                  8000d95c    00000488     system.lib : cp15.obj (.text)
+                  8000dde4    000003e4                : interrupt.obj (.text)
+                  8000e1c8    00000360     usblib.lib : usbdesc.obj (.text)
+                  8000e528    000002ec     platform.lib : uart.obj (.text)
+                  8000e814    000002c4     usb_dev_msc.obj (.text)
+                  8000ead8    00000280     utils.lib : consoleUtils.obj (.text)
+                  8000ed58    00000180     rtsv7A8_A_le_v3_eabi.lib : memcpy32.obj (.text)
+                  8000eed8    00000170     system.lib : mmu.obj (.text)
+                  8000f048    0000014c     platform.lib : uartConsole.obj (.text)
+                  8000f194    00000144     usblib.lib : usbtick.obj (.text)
+                  8000f2d8    0000013c     ramdisk.obj (.text)
+                  8000f414    0000013c     system.lib : cpu.obj (.text)
+                  8000f550    00000138     usblib.lib : usbdhandler.obj (.text)
+                  8000f688    00000130     system.lib : cache.obj (.text)
+                  8000f7b8    00000120                : exceptionhandler.obj (.text)
+                  8000f8d8    000000f4     rtsv7A8_A_le_v3_eabi.lib : u_div32.obj (.text)
+                  8000f9cc    000000f0     system.lib : startup.obj (.text)
+                  8000fabc    000000ec     platform.lib : sysdelay.obj (.text)
+                  8000fba8    000000d8     drivers.lib : usbphyGS70.obj (.text)
+                  8000fc80    000000d8     usbdmscglue.obj (.text)
+                  8000fd58    000000d4     platform.lib : usb.obj (.text)
+                  8000fe2c    000000d4     rtsv7A8_A_le_v3_eabi.lib : auto_init.obj (.text)
+                  8000ff00    000000b0                              : memset32.obj (.text)
+                  8000ffb0    00000080                              : cpy_tbl.obj (.text)
+                  80010030    0000000c     system.lib : cpu.obj (.text:CPUIntStatus)
+
+.const     0    8001003c    000002d0     
+                  8001003c    00000078     usblib.lib : usbdenum.obj (.const:g_sUSBDefaultFIFOConfig)
+                  800100b4    00000054     usb_dev_msc.obj (.const)
+                  80010108    00000048     usb_msc_structs.obj (.const:g_sMSCDevice)
+                  80010150    00000040     system.lib : startup.obj (.const:vecTbl)
+                  80010190    00000034     usblib.lib : usbdenum.obj (.const:g_psUSBDStdRequests)
+                  800101c4    00000030     usb_msc_structs.obj (.const:.string:g_pConfigString)
+                  800101f4    00000029     usblib.lib : usbdmsc.obj (.const:.string)
+                  8001021d    00000028     usb_msc_structs.obj (.const:.string:g_pDataInterfaceString)
+                  80010245    00000028     usb_msc_structs.obj (.const:.string:g_pProductString)
+                  8001026d    00000024     usb_msc_structs.obj (.const:.string:g_pManufacturerString)
+                  80010291    00000003     --HOLE-- [fill = 0]
+                  80010294    0000001d     usblib.lib : usbdmsc.obj (.const)
+                  800102b1    00000003     --HOLE-- [fill = 0]
+                  800102b4    00000018     usb_msc_structs.obj (.const)
+                  800102cc    00000016     usb_msc_structs.obj (.const:.string)
+                  800102e2    00000002     --HOLE-- [fill = 0]
+                  800102e4    00000014     utils.lib : uartStdio.obj (.const:.string)
+                  800102f8    0000000b     drivers.lib : cppi41dma.obj (.const:.string)
+                  80010303    00000001     --HOLE-- [fill = 0]
+                  80010304    00000004     system.lib : startup.obj (.const)
+                  80010308    00000004     utils.lib : uartStdio.obj (.const)
+
+.data      0    8001030c    000000a8     
+                  8001030c    00000048     usblib.lib : usbdmsc.obj (.data:g_sMSCDeviceInfo)
+                  80010354    00000030                : usbdmsc.obj (.data)
+                  80010384    00000010     usb_msc_structs.obj (.data)
+                  80010394    0000000c     usblib.lib : usbtick.obj (.data)
+                  800103a0    00000008                : usbdenum.obj (.data)
+                  800103a8    00000004     platform.lib : sysdelay.obj (.data)
+                  800103ac    00000004     system.lib : startup.obj (.data)
+                  800103b0    00000004     usb_dev_msc.obj (.data)
+
+.bss       0    80014000    0105c000     NOLOAD SECTION
+                  80014000    01000000     ramdisk.obj (.bss:ram_disk)
+                  81014000    00040000     drivers.lib : cppi41dma.obj (.bss:dBuffer)
+                  81054000    00014100                 : cppi41dma.obj (.bss:region0DescriptorSpace)
+                  81068100    00001000                 : cppi41dma.obj (.bss:dmaBuffer)
+                  81069100    00001000                 : cppi41dma.obj (.bss:linking_ram0)
+                  8106a100    00000830     usb_msc_structs.obj (.bss:g_sMSCInstance)
+                  8106a930    0000041c     drivers.lib : cppi41dma.obj (.bss:cppiInfo)
+                  8106ad4c    00000200     system.lib : interrupt.obj (.bss:fnRAMVectors)
+                  8106af4c    000000a8     usblib.lib : usbdenum.obj (.bss:g_psUSBDevice)
+                  8106aff4    00000040                : usbdmsc.obj (.bss:g_pucCommand)
+                  8106b034    00000040                : usbdenum.obj (.bss:g_pucDataBufferIn)
+                  8106b074    00000030                : usbdata.obj (.bss:g_USBInstance)
+                  8106b0a4    0000000c     (.common:g_pfTickHandlers)
+                  8106b0b0    0000000c     (.common:g_pvTickInstance)
+                  8106b0bc    00000004     (.common:dataBuffer)
+                  8106b0c0    00000004     (.common:g_sDriveInformation)
+                  8106b0c4    00000004     (.common:g_ulFlags)
+                  8106b0c8    00000001     (.common:ConsoleType)
+                  8106b0c9    00000001     (.common:g_eMSCState)
+                  8106b0ca    00000f36     --HOLE--
+                  8106c000    00004000     usb_dev_msc.obj (.bss:pageTable)
+
+.stack     0    87fffff0    00000008     UNINITIALIZED
+                  87fffff0    00000008     --HOLE--
+
+
+FAR CALL TRAMPOLINES
+
+callee name               trampoline name
+   callee addr  tramp addr   call addr  call info
+--------------  -----------  ---------  ----------------
+__TI_auto_init            $Tramp$AA$S$$__TI_auto_init
+   8000fe2c     800000c8     800000a0   system.lib : init.obj (.text:Entry)
+
+[1 trampolines]
+[1 trampoline calls]
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+80010304   AM335X_VECTOR_BASE
+8000cde0   ASCIIToDigit
+8000f8b8   AbortHandler
+8000ddb8   CP15AuxControlFeatureDisable
+8000dda4   CP15AuxControlFeatureEnable
+8000dd4c   CP15BranchPredictionDisable
+8000dd3c   CP15BranchPredictionEnable
+8000dd30   CP15BranchPredictorInvalidate
+8000dd6c   CP15ControlFeatureDisable
+8000dd80   CP15ControlFeatureEnable
+8000da48   CP15DCacheClean
+8000db80   CP15DCacheCleanBuff
+8000dadc   CP15DCacheCleanFlush
+8000dbd4   CP15DCacheCleanFlushBuff
+8000d978   CP15DCacheDisable
+8000d9a4   CP15DCacheEnable
+8000d9b4   CP15DCacheFlush
+8000dc28   CP15DCacheFlushBuff
+8000dd5c   CP15DomainAccessClientSet
+8000d95c   CP15ICacheDisable
+8000d994   CP15ICacheEnable
+8000db70   CP15ICacheFlush
+8000dc8c   CP15ICacheFlushBuff
+8000dcf8   CP15MMUDisable
+8000dd10   CP15MMUEnable
+8000ddcc   CP15MainIdPrimPartNumGet
+8000dcec   CP15TlbInvalidate
+8000dce0   CP15Ttb0Set
+8000dd94   CP15TtbCtlTtb0Config
+8000dd24   CP15VectorBaseAddrSet
+8000f46c   CPUAbortHandler
+80010030   CPUIntStatus
+8000f450   CPUSwitchToPrivilegedMode
+8000f458   CPUSwitchToUserMode
+8000f4a0   CPUfiqd
+8000f4b0   CPUfiqe
+8000f480   CPUirqd
+8000f490   CPUirqe
+8000f74c   CacheDataCleanAll
+8000f764   CacheDataCleanBuff
+8000f740   CacheDataCleanInvalidateAll
+8000f79c   CacheDataCleanInvalidateBuff
+8000f758   CacheDataInvalidateAll
+8000f780   CacheDataInvalidateBuff
+8000f688   CacheDisable
+8000f6cc   CacheEnable
+8000f718   CacheInstInvalidateAll
+8000f724   CacheInstInvalidateBuff
+8000ec60   ConsoleUtilsGetChar
+8000ebd8   ConsoleUtilsGets
+8000ead8   ConsoleUtilsInit
+8000eb18   ConsoleUtilsPrintf
+8000ecd0   ConsoleUtilsPutChar
+8000ec24   ConsoleUtilsPuts
+8000eb70   ConsoleUtilsScanf
+8000eae4   ConsoleUtilsSetType
+80004318   Cppi41DmaGetQLength
+80002308   Cppi41DmaInit
+800042e8   Cppi41DmaInitTddPool
+80003e24   Cppi41DmaRxChTeardown
+80003ff0   Cppi41DmaTxChTeardown
+80003704   CppiDmaGetPendStatus
+8000c668   DMTimer1msModuleClkConfig
+8000c150   DMTimer2ModuleClkConfig
+8000bfc4   DMTimer3ModuleClkConfig
+8000c2dc   DMTimer4ModuleClkConfig
+8000c46c   DMTimer6ModuleClkConfig
+8000c4dc   DMTimer7ModuleClkConfig
+8000ca84   DMTimerCompareGet
+8000ca48   DMTimerCompareSet
+8000cca4   DMTimerContextRestore
+8000cc24   DMTimerContextSave
+8000c940   DMTimerCounterGet
+8000c904   DMTimerCounterSet
+8000c784   DMTimerDisable
+8000c744   DMTimerEnable
+8000c9c8   DMTimerGPOConfigure
+8000cb38   DMTimerIntDisable
+8000cb14   DMTimerIntEnable
+8000cb94   DMTimerIntEnableGet
+8000cac0   DMTimerIntRawStatusGet
+8000ca9c   DMTimerIntRawStatusSet
+8000caf0   DMTimerIntStatusClear
+8000cad8   DMTimerIntStatusGet
+8000c7c4   DMTimerModeConfigure
+8000cd84   DMTimerPostedModeConfig
+8000c8c4   DMTimerPreScalerClkDisable
+8000c844   DMTimerPreScalerClkEnable
+8000c9b0   DMTimerReloadGet
+8000c974   DMTimerReloadSet
+8000cbf0   DMTimerReset
+8000cbac   DMTimerResetConfigure
+8000cb5c   DMTimerTriggerSet
+8000cdc8   DMTimerWritePostedStatusGet
+8000f8c0   DataAbortHandler
+8000d2d0   DateToStr
+8000ceb4   DigitToASCII
+80000000   Entry
+8000d064   EthrAddrToStr
+8000f8b4   FIQHandler
+8000f808   IRQHandler
+8000de2c   IntAINTCInit
+8000df64   IntActiveIrqNumGet
+8000dffc   IntCurrIrqPriorityGet
+8000e154   IntDisable
+8000e16c   IntEnable
+8000dfe8   IntFuncClkAutoGateSet
+8000dfd4   IntFuncClkFreeRunSet
+8000df50   IntIfClkAutoGateSet
+8000df3c   IntIfClkFreeRunSet
+8000e13c   IntMasterFIQDisable
+8000e130   IntMasterFIQEnable
+8000e124   IntMasterIRQDisable
+8000e118   IntMasterIRQEnable
+8000e148   IntMasterStatusGet
+8000e0dc   IntPendingIrqMaskedStatusGet
+8000de9c   IntPrioritySet
+8000e00c   IntPriorityThresholdGet
+8000e01c   IntPriorityThresholdSet
+8000df98   IntProtectionDisable
+8000df88   IntProtectionEnable
+8000e03c   IntRawStatusGet
+8000dde8   IntRegister
+8000e0ac   IntSoftwareIntClear
+8000e07c   IntSoftwareIntSet
+8000df74   IntSpurIrqFlagGet
+8000dfc0   IntSyncClkAutoGateSet
+8000dfac   IntSyncClkFreeRunSet
+8000df08   IntSystemDisable
+8000ded4   IntSystemEnable
+8000de0c   IntUnRegister
+8000f208   InternalUSBRegisterTickHandler
+8000f240   InternalUSBStartOfFrameTick
+8000f194   InternalUSBTickInit
+8000f02c   MMUEnable
+8000eed8   MMUInit
+8000ef38   MMUMemRegionMap
+8000e814   RxHandler
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+8000f7e0   SVC_Handler
+8000cf50   StrToEthrAddr
+8000d188   TimeToStr
+8000e834   TxHandler
+8000e55c   UART0ModuleClkConfig
+8000e764   UART1ModuleClkConfig
+8000e79c   UART2ModuleClkConfig
+80007ab0   UARTAutoIdleModeControl
+8000785c   UARTAutoRTSAutoCTSControl
+80007f98   UARTAutobaudParityGet
+80008030   UARTAutobaudSpeedGet
+80007fe4   UARTAutobaudWordLenGet
+800067f8   UARTBreakCtl
+80007538   UARTCharGet
+800074e0   UARTCharGetNonBlocking
+80007590   UARTCharGetTimeout
+80007620   UARTCharPut
+80007474   UARTCharPutNonBlocking
+80007420   UARTCharsAvail
+8000f170   UARTConsoleGetc
+8000f134   UARTConsoleInit
+8000f158   UARTConsolePutc
+80007f08   UARTDMACounterResetControl
+80006d34   UARTDMADisable
+80006cd8   UARTDMAEnable
+80007e20   UARTDSRInterruptControl
+8000673c   UARTDivisorLatchDisable
+80006718   UARTDivisorLatchEnable
+80006594   UARTDivisorLatchWrite
+800064d0   UARTDivisorValCompute
+80006e58   UARTEnhanFuncBitValRestore
+80006df8   UARTEnhanFuncEnable
+80007694   UARTFIFOCharGet
+80007674   UARTFIFOCharPut
+80006914   UARTFIFOConfig
+80007808   UARTFIFOEnableStatusGet
+80006d6c   UARTFIFORegisterWrite
+80007dbc   UARTFIFOTrigLvlGranControl
+800076b0   UARTFIFOWrite
+80007af4   UARTFlowCtrlTrigLvlConfig
+8000a28c   UARTGetHexNum
+8000a1d8   UARTGetNum
+8000a4f8   UARTGetc
+80009f04   UARTGets
+80007a28   UARTIdleModeConfigure
+80007304   UARTIntDisable
+80007220   UARTIntEnable
+80007768   UARTIntIdentityGet
+800077b4   UARTIntPendingStatusGet
+8000683c   UARTLineCharacConfig
+80007c68   UARTLoopbackModeControl
+80007cdc   UARTModemControlClear
+80007cac   UARTModemControlSet
+80007d28   UARTModemStatusChangeCheck
+80007d0c   UARTModemStatusGet
+800079f4   UARTModuleReset
+800080dc   UARTModuleVersionNumberGet
+80006470   UARTOperatingModeSelect
+800068f8   UARTParityModeGet
+800068b4   UARTParityModeSet
+8000e528   UARTPinMuxSetup
+8000b284   UARTPrintf
+800079b0   UARTPulseShapingControl
+8000a0ac   UARTPutHexNum
+80009fb0   UARTPutNum
+8000a4e4   UARTPutc
+80009e4c   UARTPuts
+80007eec   UARTRXCTSDSRTransitionStatusGet
+80007ea8   UARTRXCTSDSRWakeUpConfigure
+800067d8   UARTRegConfModeRestore
+80006760   UARTRegConfigModeEnable
+80007d44   UARTResumeOperation
+8000771c   UARTRxErrorGet
+80007f80   UARTRxFIFOLevelGet
+8000aa9c   UARTScanf
+800080c0   UARTScratchPadRegRead
+8000807c   UARTScratchPadRegWrite
+8000794c   UARTSoftwareFlowCtrlOptSet
+800073cc   UARTSpaceAvail
+800078e8   UARTSpecialCharDetectControl
+80009e40   UARTStdioInit
+80006ebc   UARTSubConfigMSRSPRModeEn
+80006f94   UARTSubConfigTCRTLRModeEn
+8000706c   UARTSubConfigXOFFModeEn
+80007144   UARTTCRTLRBitValRestore
+800080f8   UARTTxDMAThresholdControl
+8000813c   UARTTxDMAThresholdValConfig
+80007e64   UARTTxEmptyIntControl
+80007f4c   UARTTxFIFOFullStatusGet
+80007f68   UARTTxFIFOLevelGet
+80007a6c   UARTWakeUpControl
+80007d8c   UARTWakeUpEventsDisable
+80007d5c   UARTWakeUpEventsEnable
+80007b44   UARTXON1XOFF1ValProgram
+80007b74   UARTXON2XOFF2ValProgram
+80007ba4   UARTXONAnyFeatureControl
+8000a578   UARTprintf
+8000a504   UARTwrite
+8000f550   USB0DeviceIntHandler
+8000fd60   USB0ModuleClkConfig
+8000f5e4   USB1DeviceIntHandler
+8000fddc   USBClearInt
+80006444   USBClearOtgIntr
+8000d694   USBDCDConfigDescGet
+8000d608   USBDCDConfigDescGetNum
+8000d5a0   USBDCDConfigDescGetSize
+8000d830   USBDCDConfigGetInterface
+8000d888   USBDCDConfigGetInterfaceEndpoint
+8000d794   USBDCDConfigGetNumAlternateInterfaces
+800000d4   USBDCDInit
+80000620   USBDCDPowerStatusSet
+80000688   USBDCDRemoteWakeupRequest
+800004d4   USBDCDRequestDataEP0
+8000054c   USBDCDSendDataEP0
+800005b0   USBDCDSetDefaultConfiguration
+800005dc   USBDCDStallEP0
+800003b8   USBDCDTerm
+80008a0c   USBDMSCCompositeInit
+8000e8c4   USBDMSCEventCallback
+800089d8   USBDMSCInit
+80008180   USBDMSCMediaChange
+8000fca0   USBDMSCStorageClose
+8000fd2c   USBDMSCStorageNumBlocks
+8000fc80   USBDMSCStorageOpen
+8000fcbc   USBDMSCStorageRead
+8000fcf4   USBDMSCStorageWrite
+80008d1c   USBDMSCTerm
+80009a74   USBDSCSICommand
+8000e274   USBDescGet
+8000e498   USBDescGetInterface
+8000e4e4   USBDescGetInterfaceEndpoint
+8000e1c8   USBDescGetNum
+8000e33c   USBDescGetNumAlternateInterfaces
+80005054   USBDevAddrGet
+80005034   USBDevAddrSet
+80004fec   USBDevConnect
+80005010   USBDevDisconnect
+80005454   USBDevEndpointConfigGet
+800052d4   USBDevEndpointConfigSet
+800059bc   USBDevEndpointDataAck
+80004e8c   USBDevEndpointStall
+80004f1c   USBDevEndpointStallClear
+80004c38   USBDevEndpointStatusClear
+8000b960   USBDeviceConfig
+8000be00   USBDeviceConfigAlternate
+80000948   USBDeviceEnumHandler
+80000bc0   USBDeviceEnumResetHandler
+80002080   USBDeviceIntHandlerInternal
+80000724   USBDeviceResumeTickHandler
+80005eb8   USBDmaTxChDisable
+80005f10   USBDmaTxChTeardown
+8000fda8   USBEnableInt
+800063c8   USBEnableOtgIntr
+80006360   USBEndpointDMAChannel
+800057dc   USBEndpointDMADisable
+80005774   USBEndpointDMAEnable
+80005844   USBEndpointDataAvail
+800058b0   USBEndpointDataGet
+80005a84   USBEndpointDataPut
+80005b34   USBEndpointDataSend
+80004e24   USBEndpointDataToggleClear
+80004b5c   USBEndpointStatus
+80006320   USBFIFOAddrGet
+800056bc   USBFIFOConfigGet
+80005604   USBFIFOConfigSet
+80005bac   USBFIFOFlush
+800062bc   USBFrameNumberGet
+800060fc   USBHostAddrGet
+800060a8   USBHostAddrSet
+80005d64   USBHostAutoReqClear
+80005d10   USBHostAutoReqSet
+8000506c   USBHostEndpointConfig
+80005a28   USBHostEndpointDataAck
+80004d1c   USBHostEndpointDataToggle
+80004bac   USBHostEndpointStatusClear
+80006198   USBHostHubAddrGet
+80006144   USBHostHubAddrSet
+800061e0   USBHostPwrConfig
+80006298   USBHostPwrDisable
+80006274   USBHostPwrEnable
+80006250   USBHostPwrFaultDisable
+8000622c   USBHostPwrFaultEnable
+80005c70   USBHostRequestIN
+80005cbc   USBHostRequestINClear
+8000608c   USBHostRequestStatus
+800045e8   USBHostReset
+80004634   USBHostResume
+80004680   USBHostSpeedGet
+800045c4   USBHostSuspend
+80005fa8   USBHostTxFifoFlush
+8000478c   USBIntDisable
+80004904   USBIntDisableControl
+80004a5c   USBIntDisableEndpoint
+80004848   USBIntEnable
+80004970   USBIntEnableControl
+80004aa8   USBIntEnableEndpoint
+80004b28   USBIntRegister
+800046dc   USBIntStatus
+800049d8   USBIntStatusControl
+80004af4   USBIntStatusEndpoint
+80004b4c   USBIntUnregister
+80006344   USBModeGet
+8000fe00   USBModuleClkDisable
+8000fdec   USBModuleClkEnable
+800062d4   USBOTGSessionRequest
+80006400   USBReset
+80005db8   USBRxChAbort
+8000fd58   USBVersionGet
+8000f8bc   UndefInstHandler
+8000fc18   UsbPhyOff
+8000fba8   UsbPhyOn
+87fffff8   __STACK_END
+00000008   __STACK_SIZE
+UNDEFED    __TI_CINIT_Base
+UNDEFED    __TI_CINIT_Limit
+UNDEFED    __TI_Handler_Table_Base
+00000001   __TI_args_main
+8000fe2c   __TI_auto_init
+80000000   __TI_static_base__
+8000ff00   __aeabi_memclr
+8000ff00   __aeabi_memclr4
+8000ff00   __aeabi_memclr8
+8000ed58   __aeabi_memcpy
+8000ed58   __aeabi_memcpy4
+8000ed58   __aeabi_memcpy8
+8000ff04   __aeabi_memset
+8000ff04   __aeabi_memset4
+8000ff04   __aeabi_memset8
+8000f8d8   __aeabi_uidivmod
+ffffffff   __binit__
+ffffffff   __c_args__
+87fffff0   __stack
+ffffffff   binit
+81070000   bss_end
+80014000   bss_start
+8000ffb0   copy_in
+80003b1c   cppiDmaAllocBuffer
+80003c28   cppiDmaAllocnBuffer
+80003ba8   cppiDmaFreeBuffer
+80003d2c   cppiDmaFreenBuffer
+80003e04   cppiDmaHandleError
+8106a930   cppiInfo
+81014000   dBuffer
+8106b0bc   dataBuffer
+8000fac8   delay
+80002c70   disableCoreRxDMA
+80002d04   disableCoreTxDMA
+8000f2d8   disk_initialize
+8000f3b0   disk_ioctl
+8000f2f0   disk_read
+8000f350   disk_write
+81068100   dmaBuffer
+80003674   dmaRxCompletion
+80003568   dmaTxCompletion
+800034c8   doDmaRxTransfer
+80003130   doDmaTxTransfer
+80002bb0   enableCoreRxDMA
+80002b04   enableCoreTxDMA
+80010384   epInfo
+8106ad4c   fnRAMVectors
+8001036e   gDMAflag
+8106b074   g_USBInstance
+80010394   g_bUSBTimerInitialized
+800103b0   g_bufferIndex
+80010358   g_bytesRead
+8001035c   g_bytesWritten
+8106b0c9   g_eMSCState
+800101c4   g_pConfigString
+8001021d   g_pDataInterfaceString
+800102cc   g_pLangDescriptor
+800102ac   g_pMSCConfigDescriptors
+80010206   g_pMSCInterface
+8001026d   g_pManufacturerString
+80010245   g_pProductString
+800102d0   g_pSerialNumberString
+800102b4   g_pStringDescriptors
+8106b0a4   g_pfTickHandlers
+8001037c   g_psMSCSections
+8106af4c   g_psUSBDevice
+8106aff4   g_pucCommand
+8106b0b0   g_pvTickInstance
+8106b0c0   g_sDriveInformation
+800102a4   g_sMSCConfigHeader
+80010294   g_sMSCConfigSection
+80010108   g_sMSCDevice
+8001030c   g_sMSCDeviceInfo
+8106a100   g_sMSCInstance
+8001029c   g_sMSCInterfaceSection
+8001003c   g_sUSBDefaultFIFOConfig
+80010398   g_ulCurrentUSBTick
+8001039c   g_ulUSBSOFCount
+80002ff4   getFreeBd
+8000fb94   get_main_address
+8000fb38   get_timer
+80010354   intStatus
+8000f43c   isr_AbortHandler
+8000f414   isr_FIQHandler
+8000f428   isr_UndefInstHandler
+8000e9fc   main
+8000ed58   memcpy
+8000ff10   memset
+800043d4   print_pend
+800030a4   pushToSubmitQ
+80003048   putFreeBd
+80014000   ram_disk
+81054000   region0DescriptorSpace
+8000fb78   set_main_address
+8000f9cc   start_boot
+8000fb4c   syl_DMTimerSetUp
+8000fad8   syl_Sysdelay
+8000fabc   syl_dtimer2_init
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000008   __STACK_SIZE
+80000000   Entry
+80000000   __TI_static_base__
+800000d4   USBDCDInit
+800003b8   USBDCDTerm
+800004d4   USBDCDRequestDataEP0
+8000054c   USBDCDSendDataEP0
+800005b0   USBDCDSetDefaultConfiguration
+800005dc   USBDCDStallEP0
+80000620   USBDCDPowerStatusSet
+80000688   USBDCDRemoteWakeupRequest
+80000724   USBDeviceResumeTickHandler
+80000948   USBDeviceEnumHandler
+80000bc0   USBDeviceEnumResetHandler
+80002080   USBDeviceIntHandlerInternal
+80002308   Cppi41DmaInit
+80002b04   enableCoreTxDMA
+80002bb0   enableCoreRxDMA
+80002c70   disableCoreRxDMA
+80002d04   disableCoreTxDMA
+80002ff4   getFreeBd
+80003048   putFreeBd
+800030a4   pushToSubmitQ
+80003130   doDmaTxTransfer
+800034c8   doDmaRxTransfer
+80003568   dmaTxCompletion
+80003674   dmaRxCompletion
+80003704   CppiDmaGetPendStatus
+80003b1c   cppiDmaAllocBuffer
+80003ba8   cppiDmaFreeBuffer
+80003c28   cppiDmaAllocnBuffer
+80003d2c   cppiDmaFreenBuffer
+80003e04   cppiDmaHandleError
+80003e24   Cppi41DmaRxChTeardown
+80003ff0   Cppi41DmaTxChTeardown
+800042e8   Cppi41DmaInitTddPool
+80004318   Cppi41DmaGetQLength
+800043d4   print_pend
+800045c4   USBHostSuspend
+800045e8   USBHostReset
+80004634   USBHostResume
+80004680   USBHostSpeedGet
+800046dc   USBIntStatus
+8000478c   USBIntDisable
+80004848   USBIntEnable
+80004904   USBIntDisableControl
+80004970   USBIntEnableControl
+800049d8   USBIntStatusControl
+80004a5c   USBIntDisableEndpoint
+80004aa8   USBIntEnableEndpoint
+80004af4   USBIntStatusEndpoint
+80004b28   USBIntRegister
+80004b4c   USBIntUnregister
+80004b5c   USBEndpointStatus
+80004bac   USBHostEndpointStatusClear
+80004c38   USBDevEndpointStatusClear
+80004d1c   USBHostEndpointDataToggle
+80004e24   USBEndpointDataToggleClear
+80004e8c   USBDevEndpointStall
+80004f1c   USBDevEndpointStallClear
+80004fec   USBDevConnect
+80005010   USBDevDisconnect
+80005034   USBDevAddrSet
+80005054   USBDevAddrGet
+8000506c   USBHostEndpointConfig
+800052d4   USBDevEndpointConfigSet
+80005454   USBDevEndpointConfigGet
+80005604   USBFIFOConfigSet
+800056bc   USBFIFOConfigGet
+80005774   USBEndpointDMAEnable
+800057dc   USBEndpointDMADisable
+80005844   USBEndpointDataAvail
+800058b0   USBEndpointDataGet
+800059bc   USBDevEndpointDataAck
+80005a28   USBHostEndpointDataAck
+80005a84   USBEndpointDataPut
+80005b34   USBEndpointDataSend
+80005bac   USBFIFOFlush
+80005c70   USBHostRequestIN
+80005cbc   USBHostRequestINClear
+80005d10   USBHostAutoReqSet
+80005d64   USBHostAutoReqClear
+80005db8   USBRxChAbort
+80005eb8   USBDmaTxChDisable
+80005f10   USBDmaTxChTeardown
+80005fa8   USBHostTxFifoFlush
+8000608c   USBHostRequestStatus
+800060a8   USBHostAddrSet
+800060fc   USBHostAddrGet
+80006144   USBHostHubAddrSet
+80006198   USBHostHubAddrGet
+800061e0   USBHostPwrConfig
+8000622c   USBHostPwrFaultEnable
+80006250   USBHostPwrFaultDisable
+80006274   USBHostPwrEnable
+80006298   USBHostPwrDisable
+800062bc   USBFrameNumberGet
+800062d4   USBOTGSessionRequest
+80006320   USBFIFOAddrGet
+80006344   USBModeGet
+80006360   USBEndpointDMAChannel
+800063c8   USBEnableOtgIntr
+80006400   USBReset
+80006444   USBClearOtgIntr
+80006470   UARTOperatingModeSelect
+800064d0   UARTDivisorValCompute
+80006594   UARTDivisorLatchWrite
+80006718   UARTDivisorLatchEnable
+8000673c   UARTDivisorLatchDisable
+80006760   UARTRegConfigModeEnable
+800067d8   UARTRegConfModeRestore
+800067f8   UARTBreakCtl
+8000683c   UARTLineCharacConfig
+800068b4   UARTParityModeSet
+800068f8   UARTParityModeGet
+80006914   UARTFIFOConfig
+80006cd8   UARTDMAEnable
+80006d34   UARTDMADisable
+80006d6c   UARTFIFORegisterWrite
+80006df8   UARTEnhanFuncEnable
+80006e58   UARTEnhanFuncBitValRestore
+80006ebc   UARTSubConfigMSRSPRModeEn
+80006f94   UARTSubConfigTCRTLRModeEn
+8000706c   UARTSubConfigXOFFModeEn
+80007144   UARTTCRTLRBitValRestore
+80007220   UARTIntEnable
+80007304   UARTIntDisable
+800073cc   UARTSpaceAvail
+80007420   UARTCharsAvail
+80007474   UARTCharPutNonBlocking
+800074e0   UARTCharGetNonBlocking
+80007538   UARTCharGet
+80007590   UARTCharGetTimeout
+80007620   UARTCharPut
+80007674   UARTFIFOCharPut
+80007694   UARTFIFOCharGet
+800076b0   UARTFIFOWrite
+8000771c   UARTRxErrorGet
+80007768   UARTIntIdentityGet
+800077b4   UARTIntPendingStatusGet
+80007808   UARTFIFOEnableStatusGet
+8000785c   UARTAutoRTSAutoCTSControl
+800078e8   UARTSpecialCharDetectControl
+8000794c   UARTSoftwareFlowCtrlOptSet
+800079b0   UARTPulseShapingControl
+800079f4   UARTModuleReset
+80007a28   UARTIdleModeConfigure
+80007a6c   UARTWakeUpControl
+80007ab0   UARTAutoIdleModeControl
+80007af4   UARTFlowCtrlTrigLvlConfig
+80007b44   UARTXON1XOFF1ValProgram
+80007b74   UARTXON2XOFF2ValProgram
+80007ba4   UARTXONAnyFeatureControl
+80007c68   UARTLoopbackModeControl
+80007cac   UARTModemControlSet
+80007cdc   UARTModemControlClear
+80007d0c   UARTModemStatusGet
+80007d28   UARTModemStatusChangeCheck
+80007d44   UARTResumeOperation
+80007d5c   UARTWakeUpEventsEnable
+80007d8c   UARTWakeUpEventsDisable
+80007dbc   UARTFIFOTrigLvlGranControl
+80007e20   UARTDSRInterruptControl
+80007e64   UARTTxEmptyIntControl
+80007ea8   UARTRXCTSDSRWakeUpConfigure
+80007eec   UARTRXCTSDSRTransitionStatusGet
+80007f08   UARTDMACounterResetControl
+80007f4c   UARTTxFIFOFullStatusGet
+80007f68   UARTTxFIFOLevelGet
+80007f80   UARTRxFIFOLevelGet
+80007f98   UARTAutobaudParityGet
+80007fe4   UARTAutobaudWordLenGet
+80008030   UARTAutobaudSpeedGet
+8000807c   UARTScratchPadRegWrite
+800080c0   UARTScratchPadRegRead
+800080dc   UARTModuleVersionNumberGet
+800080f8   UARTTxDMAThresholdControl
+8000813c   UARTTxDMAThresholdValConfig
+80008180   USBDMSCMediaChange
+800089d8   USBDMSCInit
+80008a0c   USBDMSCCompositeInit
+80008d1c   USBDMSCTerm
+80009a74   USBDSCSICommand
+80009e40   UARTStdioInit
+80009e4c   UARTPuts
+80009f04   UARTGets
+80009fb0   UARTPutNum
+8000a0ac   UARTPutHexNum
+8000a1d8   UARTGetNum
+8000a28c   UARTGetHexNum
+8000a4e4   UARTPutc
+8000a4f8   UARTGetc
+8000a504   UARTwrite
+8000a578   UARTprintf
+8000aa9c   UARTScanf
+8000b284   UARTPrintf
+8000b960   USBDeviceConfig
+8000be00   USBDeviceConfigAlternate
+8000bfc4   DMTimer3ModuleClkConfig
+8000c150   DMTimer2ModuleClkConfig
+8000c2dc   DMTimer4ModuleClkConfig
+8000c46c   DMTimer6ModuleClkConfig
+8000c4dc   DMTimer7ModuleClkConfig
+8000c668   DMTimer1msModuleClkConfig
+8000c744   DMTimerEnable
+8000c784   DMTimerDisable
+8000c7c4   DMTimerModeConfigure
+8000c844   DMTimerPreScalerClkEnable
+8000c8c4   DMTimerPreScalerClkDisable
+8000c904   DMTimerCounterSet
+8000c940   DMTimerCounterGet
+8000c974   DMTimerReloadSet
+8000c9b0   DMTimerReloadGet
+8000c9c8   DMTimerGPOConfigure
+8000ca48   DMTimerCompareSet
+8000ca84   DMTimerCompareGet
+8000ca9c   DMTimerIntRawStatusSet
+8000cac0   DMTimerIntRawStatusGet
+8000cad8   DMTimerIntStatusGet
+8000caf0   DMTimerIntStatusClear
+8000cb14   DMTimerIntEnable
+8000cb38   DMTimerIntDisable
+8000cb5c   DMTimerTriggerSet
+8000cb94   DMTimerIntEnableGet
+8000cbac   DMTimerResetConfigure
+8000cbf0   DMTimerReset
+8000cc24   DMTimerContextSave
+8000cca4   DMTimerContextRestore
+8000cd84   DMTimerPostedModeConfig
+8000cdc8   DMTimerWritePostedStatusGet
+8000cde0   ASCIIToDigit
+8000ceb4   DigitToASCII
+8000cf50   StrToEthrAddr
+8000d064   EthrAddrToStr
+8000d188   TimeToStr
+8000d2d0   DateToStr
+8000d5a0   USBDCDConfigDescGetSize
+8000d608   USBDCDConfigDescGetNum
+8000d694   USBDCDConfigDescGet
+8000d794   USBDCDConfigGetNumAlternateInterfaces
+8000d830   USBDCDConfigGetInterface
+8000d888   USBDCDConfigGetInterfaceEndpoint
+8000d95c   CP15ICacheDisable
+8000d978   CP15DCacheDisable
+8000d994   CP15ICacheEnable
+8000d9a4   CP15DCacheEnable
+8000d9b4   CP15DCacheFlush
+8000da48   CP15DCacheClean
+8000dadc   CP15DCacheCleanFlush
+8000db70   CP15ICacheFlush
+8000db80   CP15DCacheCleanBuff
+8000dbd4   CP15DCacheCleanFlushBuff
+8000dc28   CP15DCacheFlushBuff
+8000dc8c   CP15ICacheFlushBuff
+8000dce0   CP15Ttb0Set
+8000dcec   CP15TlbInvalidate
+8000dcf8   CP15MMUDisable
+8000dd10   CP15MMUEnable
+8000dd24   CP15VectorBaseAddrSet
+8000dd30   CP15BranchPredictorInvalidate
+8000dd3c   CP15BranchPredictionEnable
+8000dd4c   CP15BranchPredictionDisable
+8000dd5c   CP15DomainAccessClientSet
+8000dd6c   CP15ControlFeatureDisable
+8000dd80   CP15ControlFeatureEnable
+8000dd94   CP15TtbCtlTtb0Config
+8000dda4   CP15AuxControlFeatureEnable
+8000ddb8   CP15AuxControlFeatureDisable
+8000ddcc   CP15MainIdPrimPartNumGet
+8000dde8   IntRegister
+8000de0c   IntUnRegister
+8000de2c   IntAINTCInit
+8000de9c   IntPrioritySet
+8000ded4   IntSystemEnable
+8000df08   IntSystemDisable
+8000df3c   IntIfClkFreeRunSet
+8000df50   IntIfClkAutoGateSet
+8000df64   IntActiveIrqNumGet
+8000df74   IntSpurIrqFlagGet
+8000df88   IntProtectionEnable
+8000df98   IntProtectionDisable
+8000dfac   IntSyncClkFreeRunSet
+8000dfc0   IntSyncClkAutoGateSet
+8000dfd4   IntFuncClkFreeRunSet
+8000dfe8   IntFuncClkAutoGateSet
+8000dffc   IntCurrIrqPriorityGet
+8000e00c   IntPriorityThresholdGet
+8000e01c   IntPriorityThresholdSet
+8000e03c   IntRawStatusGet
+8000e07c   IntSoftwareIntSet
+8000e0ac   IntSoftwareIntClear
+8000e0dc   IntPendingIrqMaskedStatusGet
+8000e118   IntMasterIRQEnable
+8000e124   IntMasterIRQDisable
+8000e130   IntMasterFIQEnable
+8000e13c   IntMasterFIQDisable
+8000e148   IntMasterStatusGet
+8000e154   IntDisable
+8000e16c   IntEnable
+8000e1c8   USBDescGetNum
+8000e274   USBDescGet
+8000e33c   USBDescGetNumAlternateInterfaces
+8000e498   USBDescGetInterface
+8000e4e4   USBDescGetInterfaceEndpoint
+8000e528   UARTPinMuxSetup
+8000e55c   UART0ModuleClkConfig
+8000e764   UART1ModuleClkConfig
+8000e79c   UART2ModuleClkConfig
+8000e814   RxHandler
+8000e834   TxHandler
+8000e8c4   USBDMSCEventCallback
+8000e9fc   main
+8000ead8   ConsoleUtilsInit
+8000eae4   ConsoleUtilsSetType
+8000eb18   ConsoleUtilsPrintf
+8000eb70   ConsoleUtilsScanf
+8000ebd8   ConsoleUtilsGets
+8000ec24   ConsoleUtilsPuts
+8000ec60   ConsoleUtilsGetChar
+8000ecd0   ConsoleUtilsPutChar
+8000ed58   __aeabi_memcpy
+8000ed58   __aeabi_memcpy4
+8000ed58   __aeabi_memcpy8
+8000ed58   memcpy
+8000eed8   MMUInit
+8000ef38   MMUMemRegionMap
+8000f02c   MMUEnable
+8000f134   UARTConsoleInit
+8000f158   UARTConsolePutc
+8000f170   UARTConsoleGetc
+8000f194   InternalUSBTickInit
+8000f208   InternalUSBRegisterTickHandler
+8000f240   InternalUSBStartOfFrameTick
+8000f2d8   disk_initialize
+8000f2f0   disk_read
+8000f350   disk_write
+8000f3b0   disk_ioctl
+8000f414   isr_FIQHandler
+8000f428   isr_UndefInstHandler
+8000f43c   isr_AbortHandler
+8000f450   CPUSwitchToPrivilegedMode
+8000f458   CPUSwitchToUserMode
+8000f46c   CPUAbortHandler
+8000f480   CPUirqd
+8000f490   CPUirqe
+8000f4a0   CPUfiqd
+8000f4b0   CPUfiqe
+8000f550   USB0DeviceIntHandler
+8000f5e4   USB1DeviceIntHandler
+8000f688   CacheDisable
+8000f6cc   CacheEnable
+8000f718   CacheInstInvalidateAll
+8000f724   CacheInstInvalidateBuff
+8000f740   CacheDataCleanInvalidateAll
+8000f74c   CacheDataCleanAll
+8000f758   CacheDataInvalidateAll
+8000f764   CacheDataCleanBuff
+8000f780   CacheDataInvalidateBuff
+8000f79c   CacheDataCleanInvalidateBuff
+8000f7e0   SVC_Handler
+8000f808   IRQHandler
+8000f8b4   FIQHandler
+8000f8b8   AbortHandler
+8000f8bc   UndefInstHandler
+8000f8c0   DataAbortHandler
+8000f8d8   __aeabi_uidivmod
+8000f9cc   start_boot
+8000fabc   syl_dtimer2_init
+8000fac8   delay
+8000fad8   syl_Sysdelay
+8000fb38   get_timer
+8000fb4c   syl_DMTimerSetUp
+8000fb78   set_main_address
+8000fb94   get_main_address
+8000fba8   UsbPhyOn
+8000fc18   UsbPhyOff
+8000fc80   USBDMSCStorageOpen
+8000fca0   USBDMSCStorageClose
+8000fcbc   USBDMSCStorageRead
+8000fcf4   USBDMSCStorageWrite
+8000fd2c   USBDMSCStorageNumBlocks
+8000fd58   USBVersionGet
+8000fd60   USB0ModuleClkConfig
+8000fda8   USBEnableInt
+8000fddc   USBClearInt
+8000fdec   USBModuleClkEnable
+8000fe00   USBModuleClkDisable
+8000fe2c   __TI_auto_init
+8000ff00   __aeabi_memclr
+8000ff00   __aeabi_memclr4
+8000ff00   __aeabi_memclr8
+8000ff04   __aeabi_memset
+8000ff04   __aeabi_memset4
+8000ff04   __aeabi_memset8
+8000ff10   memset
+8000ffb0   copy_in
+80010030   CPUIntStatus
+8001003c   g_sUSBDefaultFIFOConfig
+80010108   g_sMSCDevice
+800101c4   g_pConfigString
+80010206   g_pMSCInterface
+8001021d   g_pDataInterfaceString
+80010245   g_pProductString
+8001026d   g_pManufacturerString
+80010294   g_sMSCConfigSection
+8001029c   g_sMSCInterfaceSection
+800102a4   g_sMSCConfigHeader
+800102ac   g_pMSCConfigDescriptors
+800102b4   g_pStringDescriptors
+800102cc   g_pLangDescriptor
+800102d0   g_pSerialNumberString
+80010304   AM335X_VECTOR_BASE
+8001030c   g_sMSCDeviceInfo
+80010354   intStatus
+80010358   g_bytesRead
+8001035c   g_bytesWritten
+8001036e   gDMAflag
+8001037c   g_psMSCSections
+80010384   epInfo
+80010394   g_bUSBTimerInitialized
+80010398   g_ulCurrentUSBTick
+8001039c   g_ulUSBSOFCount
+800103b0   g_bufferIndex
+80014000   bss_start
+80014000   ram_disk
+81014000   dBuffer
+81054000   region0DescriptorSpace
+81068100   dmaBuffer
+8106a100   g_sMSCInstance
+8106a930   cppiInfo
+8106ad4c   fnRAMVectors
+8106af4c   g_psUSBDevice
+8106aff4   g_pucCommand
+8106b074   g_USBInstance
+8106b0a4   g_pfTickHandlers
+8106b0b0   g_pvTickInstance
+8106b0bc   dataBuffer
+8106b0c0   g_sDriveInformation
+8106b0c9   g_eMSCState
+81070000   bss_end
+87fffff0   __stack
+87fffff8   __STACK_END
+ffffffff   __binit__
+ffffffff   __c_args__
+ffffffff   binit
+UNDEFED    SHT$$INIT_ARRAY$$Base
+UNDEFED    SHT$$INIT_ARRAY$$Limit
+UNDEFED    __TI_CINIT_Base
+UNDEFED    __TI_CINIT_Limit
+UNDEFED    __TI_Handler_Table_Base
+
+[451 symbols]

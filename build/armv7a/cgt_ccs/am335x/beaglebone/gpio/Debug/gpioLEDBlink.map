@@ -1,0 +1,424 @@
+******************************************************************************
+                  TI ARM Linker PC v5.2.2                      
+******************************************************************************
+>> Linked Fri Jul 24 13:37:57 2015
+
+OUTPUT FILE NAME:   <../../../../../../../binary/armv7a/cgt_ccs/am335x/beaglebone/gpio/Debug/gpioLEDBlink.out>
+ENTRY POINT SYMBOL: "Entry"  address: 80002754
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  DDR_MEM_0             80000000   10000000  00002c80  0fffd380  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+80000000    80000000    00002a34   00002a34    r-x
+  80000000    80000000    00002a34   00002a34    r-x .text
+80002a34    80002a34    00000200   00000000    rw-
+  80002a34    80002a34    00000200   00000000    rw- .bss
+80002c34    80002c34    0000003c   0000003c    r--
+  80002c34    80002c34    0000003c   0000003c    r-- .const
+80002c70    80002c70    00000008   00000000    rw-
+  80002c70    80002c70    00000008   00000000    rw- .stack
+80002c78    80002c78    00000008   00000008    rw-
+  80002c78    80002c78    00000008   00000008    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    80000000    00002a34     
+                  80000000    00000be4     drivers.lib : mcspi.obj (.text)
+                  80000be4    00000b50                 : gpio_v2.obj (.text)
+                  80001734    00000488     system.lib : cp15.obj (.text)
+                  80001bbc    000003e4                : interrupt.obj (.text)
+                  80001fa0    00000278     platform.lib : gpio.obj (.text)
+                  80002218    000001bc     gpioLEDBlink.obj (.text)
+                  800023d4    00000180     rtsv7A8_A_le_v3_eabi.lib : memcpy32.obj (.text)
+                  80002554    0000010c     system.lib : exceptionhandler.obj (.text)
+                  80002660    000000f4     rtsv7A8_A_le_v3_eabi.lib : u_div32.obj (.text)
+                  80002754    000000c8     system.lib : init.obj (.text:Entry)
+                  8000281c    000000a4     rtsv7A8_A_le_v3_eabi.lib : autoinit.obj (.text)
+                  800028c0    00000084                              : cpy_tbl.obj (.text)
+                  80002944    00000084     system.lib : startup.obj (.text)
+                  800029c8    00000060                : cpu.obj (.text)
+                  80002a28    0000000c                : cpu.obj (.text:CPUIntStatus)
+
+.cinit     0    80000000    00000000     UNINITIALIZED
+
+.bss       0    80002a34    00000200     UNINITIALIZED
+                  80002a34    00000200     system.lib : interrupt.obj (.bss:fnRAMVectors)
+
+.TI.noinit 
+*          0    80002a34    00000000     UNINITIALIZED
+
+.const     0    80002c34    0000003c     
+                  80002c34    00000038     system.lib : startup.obj (.const:vecTbl)
+                  80002c6c    00000004                : startup.obj (.const)
+
+.stack     0    80002c70    00000008     UNINITIALIZED
+                  80002c70    00000008     --HOLE--
+
+.data      0    80002c78    00000008     
+                  80002c78    00000008     gpioLEDBlink.obj (.data)
+
+.TI.persistent 
+*          0    80002c78    00000000     UNINITIALIZED
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                         
+-------   ----                         
+80002c6c  AM335X_VECTOR_BASE           
+80002648  AbortHandler                 
+80001b90  CP15AuxControlFeatureDisable 
+80001b7c  CP15AuxControlFeatureEnable  
+80001b24  CP15BranchPredictionDisable  
+80001b14  CP15BranchPredictionEnable   
+80001b08  CP15BranchPredictorInvalidate
+80001b44  CP15ControlFeatureDisable    
+80001b58  CP15ControlFeatureEnable     
+80001820  CP15DCacheClean              
+80001958  CP15DCacheCleanBuff          
+800018b4  CP15DCacheCleanFlush         
+800019ac  CP15DCacheCleanFlushBuff     
+80001750  CP15DCacheDisable            
+8000177c  CP15DCacheEnable             
+8000178c  CP15DCacheFlush              
+80001a00  CP15DCacheFlushBuff          
+80001b34  CP15DomainAccessClientSet    
+80001734  CP15ICacheDisable            
+8000176c  CP15ICacheEnable             
+80001948  CP15ICacheFlush              
+80001a64  CP15ICacheFlushBuff          
+80001ad0  CP15MMUDisable               
+80001ae8  CP15MMUEnable                
+80001ba4  CP15MainIdPrimPartNumGet     
+80001ac4  CP15TlbInvalidate            
+80001ab8  CP15Ttb0Set                  
+80001b6c  CP15TtbCtlTtb0Config         
+80001afc  CP15VectorBaseAddrSet        
+800029e4  CPUAbortHandler              
+80002a28  CPUIntStatus                 
+800029c8  CPUSwitchToPrivilegedMode    
+800029d0  CPUSwitchToUserMode          
+80002a08  CPUfiqd                      
+80002a18  CPUfiqe                      
+800029e8  CPUirqd                      
+800029f8  CPUirqe                      
+80002754  Entry                        
+80002644  FIQHandler                   
+80001fb0  GPIO0ModuleClkConfig         
+80002068  GPIO1ModuleClkConfig         
+80001fa0  GPIO1Pin23PinMuxSetup        
+800021a0  GPIO1PinMuxSetup             
+800020d0  GPIO2ModuleClkConfig         
+80002138  GPIO3ModuleClkConfig         
+80001554  GPIOAutoIdleModeControl      
+80001620  GPIODebounceFuncControl      
+80001670  GPIODebounceTimeConfig       
+80000cc0  GPIODirModeGet               
+80000c60  GPIODirModeSet               
+800015dc  GPIOGatingRatioConfigure     
+80001598  GPIOIdleModeConfigure        
+8000120c  GPIOIntTypeGet               
+80000e6c  GPIOIntTypeSet               
+80000c3c  GPIOModuleDisable            
+80000c18  GPIOModuleEnable             
+80000be4  GPIOModuleReset              
+80000da8  GPIOMultiplePinsRead         
+80000d78  GPIOMultiplePinsWrite        
+80001350  GPIOPinIntClear              
+80000e1c  GPIOPinIntDisable            
+80000dcc  GPIOPinIntEnable             
+800012ec  GPIOPinIntStatus             
+800014f4  GPIOPinIntWakeUpDisable      
+80001494  GPIOPinIntWakeUpEnable       
+80000d50  GPIOPinRead                  
+80000d00  GPIOPinWrite                 
+800013a0  GPIORawIntStatus             
+80001694  GPIORevisionInfoGet          
+800013fc  GPIOTriggerPinInt            
+80001470  GPIOWakeupGlobalDisable      
+8000144c  GPIOWakeupGlobalEnable       
+800021c0  GpioPinMuxSetup              
+80002598  IRQHandler                   
+80001c04  IntAINTCInit                 
+80001d3c  IntActiveIrqNumGet           
+80001dd4  IntCurrIrqPriorityGet        
+80001f2c  IntDisable                   
+80001f44  IntEnable                    
+80001dc0  IntFuncClkAutoGateSet        
+80001dac  IntFuncClkFreeRunSet         
+80001d28  IntIfClkAutoGateSet          
+80001d14  IntIfClkFreeRunSet           
+80001f14  IntMasterFIQDisable          
+80001f08  IntMasterFIQEnable           
+80001efc  IntMasterIRQDisable          
+80001ef0  IntMasterIRQEnable           
+80001f20  IntMasterStatusGet           
+80001eb4  IntPendingIrqMaskedStatusGet 
+80001c74  IntPrioritySet               
+80001de4  IntPriorityThresholdGet      
+80001df4  IntPriorityThresholdSet      
+80001d70  IntProtectionDisable         
+80001d60  IntProtectionEnable          
+80001e14  IntRawStatusGet              
+80001bc0  IntRegister                  
+80001e84  IntSoftwareIntClear          
+80001e54  IntSoftwareIntSet            
+80001d4c  IntSpurIrqFlagGet            
+80001d98  IntSyncClkAutoGateSet        
+80001d84  IntSyncClkFreeRunSet         
+80001ce0  IntSystemDisable             
+80001cac  IntSystemEnable              
+80001be4  IntUnRegister                
+80000364  McSPICSAssert                
+8000039c  McSPICSDeAssert              
+8000026c  McSPICSDisable               
+80000248  McSPICSEnable                
+80000290  McSPICSPolarityConfig        
+800002f8  McSPICSTimeControlSet        
+80000674  McSPIChannelDisable          
+8000063c  McSPIChannelEnable           
+80000b30  McSPIChannelStatusGet        
+80000000  McSPIClkConfig               
+800009a4  McSPIDMADisable              
+80000960  McSPIDMAEnable               
+80000ba0  McSPIFIFODatManagementConfig 
+80000820  McSPIFIFOTrigLvlSet          
+80000a40  McSPIInitDelayConfig         
+80000a14  McSPIIntDisable              
+800009e8  McSPIIntEnable               
+80000afc  McSPIIntStatusClear          
+80000ae4  McSPIIntStatusGet            
+800004d0  McSPIMasterModeConfig        
+800004ac  McSPIMasterModeEnable        
+80000b5c  McSPIMultipleWordAccessConfig
+80000ab8  McSPIReceiveData             
+800006ac  McSPIReset                   
+800007b8  McSPIRxFIFOConfig            
+80000474  McSPIStartBitDisable         
+800003d4  McSPIStartBitEnable          
+8000040c  McSPIStartBitPolarityConfig  
+80000a84  McSPITransmitData            
+80000718  McSPITurboModeDisable        
+800006e0  McSPITurboModeEnable         
+80000750  McSPITxFIFOConfig            
+80000920  McSPIWordCountSet            
+800001e0  McSPIWordLengthSet           
+UNDEFED   SHT$$INIT_ARRAY$$Base        
+UNDEFED   SHT$$INIT_ARRAY$$Limit       
+80002570  SVC_Handler                  
+80002648  UndefInstHandler             
+80002c78  __STACK_END                  
+00000008  __STACK_SIZE                 
+UNDEFED   __TI_CINIT_Base              
+UNDEFED   __TI_CINIT_Limit             
+UNDEFED   __TI_Handler_Table_Base      
+UNDEFED   __TI_Handler_Table_Limit     
+8000281c  __TI_auto_init               
+80000000  __TI_static_base__           
+800023d4  __aeabi_memcpy               
+800023d4  __aeabi_memcpy4              
+800023d4  __aeabi_memcpy8              
+80002660  __aeabi_uidiv                
+80002660  __aeabi_uidivmod             
+ffffffff  __binit__                    
+ffffffff  __c_args__                   
+80002c70  __stack                      
+ffffffff  binit                        
+80002c34  bss_end                      
+80002a34  bss_start                    
+800028c0  copy_in                      
+80002a34  fnRAMVectors                 
+800016f0  gpioContextRestore           
+800016ac  gpioContextSave              
+80002218  main                         
+800023d4  memcpy                       
+80002944  start_boot                   
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                         
+-------   ----                         
+00000008  __STACK_SIZE                 
+80000000  McSPIClkConfig               
+80000000  __TI_static_base__           
+800001e0  McSPIWordLengthSet           
+80000248  McSPICSEnable                
+8000026c  McSPICSDisable               
+80000290  McSPICSPolarityConfig        
+800002f8  McSPICSTimeControlSet        
+80000364  McSPICSAssert                
+8000039c  McSPICSDeAssert              
+800003d4  McSPIStartBitEnable          
+8000040c  McSPIStartBitPolarityConfig  
+80000474  McSPIStartBitDisable         
+800004ac  McSPIMasterModeEnable        
+800004d0  McSPIMasterModeConfig        
+8000063c  McSPIChannelEnable           
+80000674  McSPIChannelDisable          
+800006ac  McSPIReset                   
+800006e0  McSPITurboModeEnable         
+80000718  McSPITurboModeDisable        
+80000750  McSPITxFIFOConfig            
+800007b8  McSPIRxFIFOConfig            
+80000820  McSPIFIFOTrigLvlSet          
+80000920  McSPIWordCountSet            
+80000960  McSPIDMAEnable               
+800009a4  McSPIDMADisable              
+800009e8  McSPIIntEnable               
+80000a14  McSPIIntDisable              
+80000a40  McSPIInitDelayConfig         
+80000a84  McSPITransmitData            
+80000ab8  McSPIReceiveData             
+80000ae4  McSPIIntStatusGet            
+80000afc  McSPIIntStatusClear          
+80000b30  McSPIChannelStatusGet        
+80000b5c  McSPIMultipleWordAccessConfig
+80000ba0  McSPIFIFODatManagementConfig 
+80000be4  GPIOModuleReset              
+80000c18  GPIOModuleEnable             
+80000c3c  GPIOModuleDisable            
+80000c60  GPIODirModeSet               
+80000cc0  GPIODirModeGet               
+80000d00  GPIOPinWrite                 
+80000d50  GPIOPinRead                  
+80000d78  GPIOMultiplePinsWrite        
+80000da8  GPIOMultiplePinsRead         
+80000dcc  GPIOPinIntEnable             
+80000e1c  GPIOPinIntDisable            
+80000e6c  GPIOIntTypeSet               
+8000120c  GPIOIntTypeGet               
+800012ec  GPIOPinIntStatus             
+80001350  GPIOPinIntClear              
+800013a0  GPIORawIntStatus             
+800013fc  GPIOTriggerPinInt            
+8000144c  GPIOWakeupGlobalEnable       
+80001470  GPIOWakeupGlobalDisable      
+80001494  GPIOPinIntWakeUpEnable       
+800014f4  GPIOPinIntWakeUpDisable      
+80001554  GPIOAutoIdleModeControl      
+80001598  GPIOIdleModeConfigure        
+800015dc  GPIOGatingRatioConfigure     
+80001620  GPIODebounceFuncControl      
+80001670  GPIODebounceTimeConfig       
+80001694  GPIORevisionInfoGet          
+800016ac  gpioContextSave              
+800016f0  gpioContextRestore           
+80001734  CP15ICacheDisable            
+80001750  CP15DCacheDisable            
+8000176c  CP15ICacheEnable             
+8000177c  CP15DCacheEnable             
+8000178c  CP15DCacheFlush              
+80001820  CP15DCacheClean              
+800018b4  CP15DCacheCleanFlush         
+80001948  CP15ICacheFlush              
+80001958  CP15DCacheCleanBuff          
+800019ac  CP15DCacheCleanFlushBuff     
+80001a00  CP15DCacheFlushBuff          
+80001a64  CP15ICacheFlushBuff          
+80001ab8  CP15Ttb0Set                  
+80001ac4  CP15TlbInvalidate            
+80001ad0  CP15MMUDisable               
+80001ae8  CP15MMUEnable                
+80001afc  CP15VectorBaseAddrSet        
+80001b08  CP15BranchPredictorInvalidate
+80001b14  CP15BranchPredictionEnable   
+80001b24  CP15BranchPredictionDisable  
+80001b34  CP15DomainAccessClientSet    
+80001b44  CP15ControlFeatureDisable    
+80001b58  CP15ControlFeatureEnable     
+80001b6c  CP15TtbCtlTtb0Config         
+80001b7c  CP15AuxControlFeatureEnable  
+80001b90  CP15AuxControlFeatureDisable 
+80001ba4  CP15MainIdPrimPartNumGet     
+80001bc0  IntRegister                  
+80001be4  IntUnRegister                
+80001c04  IntAINTCInit                 
+80001c74  IntPrioritySet               
+80001cac  IntSystemEnable              
+80001ce0  IntSystemDisable             
+80001d14  IntIfClkFreeRunSet           
+80001d28  IntIfClkAutoGateSet          
+80001d3c  IntActiveIrqNumGet           
+80001d4c  IntSpurIrqFlagGet            
+80001d60  IntProtectionEnable          
+80001d70  IntProtectionDisable         
+80001d84  IntSyncClkFreeRunSet         
+80001d98  IntSyncClkAutoGateSet        
+80001dac  IntFuncClkFreeRunSet         
+80001dc0  IntFuncClkAutoGateSet        
+80001dd4  IntCurrIrqPriorityGet        
+80001de4  IntPriorityThresholdGet      
+80001df4  IntPriorityThresholdSet      
+80001e14  IntRawStatusGet              
+80001e54  IntSoftwareIntSet            
+80001e84  IntSoftwareIntClear          
+80001eb4  IntPendingIrqMaskedStatusGet 
+80001ef0  IntMasterIRQEnable           
+80001efc  IntMasterIRQDisable          
+80001f08  IntMasterFIQEnable           
+80001f14  IntMasterFIQDisable          
+80001f20  IntMasterStatusGet           
+80001f2c  IntDisable                   
+80001f44  IntEnable                    
+80001fa0  GPIO1Pin23PinMuxSetup        
+80001fb0  GPIO0ModuleClkConfig         
+80002068  GPIO1ModuleClkConfig         
+800020d0  GPIO2ModuleClkConfig         
+80002138  GPIO3ModuleClkConfig         
+800021a0  GPIO1PinMuxSetup             
+800021c0  GpioPinMuxSetup              
+80002218  main                         
+800023d4  __aeabi_memcpy               
+800023d4  __aeabi_memcpy4              
+800023d4  __aeabi_memcpy8              
+800023d4  memcpy                       
+80002570  SVC_Handler                  
+80002598  IRQHandler                   
+80002644  FIQHandler                   
+80002648  AbortHandler                 
+80002648  UndefInstHandler             
+80002660  __aeabi_uidiv                
+80002660  __aeabi_uidivmod             
+80002754  Entry                        
+8000281c  __TI_auto_init               
+800028c0  copy_in                      
+80002944  start_boot                   
+800029c8  CPUSwitchToPrivilegedMode    
+800029d0  CPUSwitchToUserMode          
+800029e4  CPUAbortHandler              
+800029e8  CPUirqd                      
+800029f8  CPUirqe                      
+80002a08  CPUfiqd                      
+80002a18  CPUfiqe                      
+80002a28  CPUIntStatus                 
+80002a34  bss_start                    
+80002a34  fnRAMVectors                 
+80002c34  bss_end                      
+80002c6c  AM335X_VECTOR_BASE           
+80002c70  __stack                      
+80002c78  __STACK_END                  
+ffffffff  __binit__                    
+ffffffff  __c_args__                   
+ffffffff  binit                        
+UNDEFED   SHT$$INIT_ARRAY$$Base        
+UNDEFED   SHT$$INIT_ARRAY$$Limit       
+UNDEFED   __TI_CINIT_Base              
+UNDEFED   __TI_CINIT_Limit             
+UNDEFED   __TI_Handler_Table_Base      
+UNDEFED   __TI_Handler_Table_Limit     
+
+[168 symbols]

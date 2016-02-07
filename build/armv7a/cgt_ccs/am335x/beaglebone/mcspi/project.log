@@ -1,0 +1,7 @@
+
+!CONFIGURATION: 'com.ti.ccstudio.buildDefinitions.TMS470.Debug.21208263' [Fri Aug 14 10:48:19 MSK 2015]
+
+	!TOOL: 'com.ti.ccstudio.buildDefinitions.TMS470_5.1.exe.linkerDebug.369473979'
+
+		!WARNING: Unresolved option: com.ti.ccstudio.buildDefinitions.TMS470_5.1.linkerID.CINIT_HOLD_WDT
+

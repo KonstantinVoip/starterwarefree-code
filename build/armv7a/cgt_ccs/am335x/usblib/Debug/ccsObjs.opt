@@ -1,0 +1,1 @@
+"./usbbuffer.obj" "./usbdata.obj" "./usbdbulk.obj" "./usbdcdc.obj" "./usbdcdesc.obj" "./usbdcomp.obj" "./usbdconfig.obj" "./usbdenum.obj" "./usbdesc.obj" "./usbdhandler.obj" "./usbdhid.obj" "./usbdhidmouse.obj" "./usbdmsc.obj" "./usbhhid.obj" "./usbhhidmouse.obj" "./usbhmsc.obj" "./usbhostenum.obj" "./usbhscsi.obj" "./usbringbuf.obj" "./usbtick.obj" 
