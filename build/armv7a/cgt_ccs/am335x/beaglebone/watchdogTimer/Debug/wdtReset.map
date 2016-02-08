@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v5.1.6                      
 ******************************************************************************
->> Linked Sun Feb 07 14:06:21 2016
+>> Linked Mon Feb 08 12:33:06 2016
 
 OUTPUT FILE NAME:   <../../../../../../../binary/armv7a/cgt_ccs/am335x/beaglebone/watchdogTimer/Debug/wdtReset.out>
 ENTRY POINT SYMBOL: "Entry"  address: 8000d4bc

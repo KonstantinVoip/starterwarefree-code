@@ -6,9 +6,6 @@ SHELL = cmd.exe
 
 CG_TOOL_ROOT := C:/ti/ccsv6/tools/compiler/arm_5.1.6
 
-GEN_OPTS__FLAG := 
-GEN_CMDS__FLAG := 
-
 ORDERED_OBJS += \
 "./board.obj" \
 "./cpsw.obj" \
@@ -141,7 +138,7 @@ LIB_OUTPUTS__QUOTED += \
 all: ../../../../../../../binary/armv7a/cgt_ccs/am335x/beaglebone/platform/Debug/platform.lib
 
 # Tool invocations
-../../../../../../../binary/armv7a/cgt_ccs/am335x/beaglebone/platform/Debug/platform.lib: $(OBJS) $(LIB_SRCS)
+../../../../../../../binary/armv7a/cgt_ccs/am335x/beaglebone/platform/Debug/platform.lib: $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Archiver'
 	"C:/ti/ccsv6/tools/compiler/arm_5.1.6/bin/armar" r "../../../../../../../binary/armv7a/cgt_ccs/am335x/beaglebone/platform/Debug/platform.lib" $(ORDERED_OBJS)

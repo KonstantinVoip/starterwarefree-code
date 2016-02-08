@@ -6,9 +6,6 @@ SHELL = cmd.exe
 
 CG_TOOL_ROOT := C:/ti/ccsv6/tools/compiler/arm_5.1.6
 
-GEN_OPTS__FLAG := 
-GEN_CMDS__FLAG := 
-
 ORDERED_OBJS += \
 "./syl_mmcsd_proto.obj" \
 $(GEN_CMDS__FLAG) \

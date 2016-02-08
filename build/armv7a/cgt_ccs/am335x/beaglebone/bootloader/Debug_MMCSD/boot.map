@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v5.1.6                      
 ******************************************************************************
->> Linked Sun Feb 07 14:05:14 2016
+>> Linked Mon Feb 08 12:32:27 2016
 
 OUTPUT FILE NAME:   <C:/Share/starterwarefree-code/binary/armv7a/cgt_ccs/am335x/beaglebone/bootloader/Debug_MMCSD/boot.out>
 ENTRY POINT SYMBOL: "Entry"  address: 402f0400

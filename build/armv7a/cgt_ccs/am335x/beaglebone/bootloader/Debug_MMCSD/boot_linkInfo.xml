@@ -2,7 +2,7 @@
 <link_info>
    <banner>TI ARM Linker PC v5.1.6</banner>
    <copyright>Copyright (c) 1996-2014 Texas Instruments Incorporated</copyright>
-   <link_time>0x56b724ea</link_time>
+   <link_time>0x56b860ab</link_time>
    <link_errors>0x0</link_errors>
    <output_file>C:/Share/starterwarefree-code/binary/armv7a/cgt_ccs/am335x/beaglebone/bootloader/Debug_MMCSD/boot.out</output_file>
    <entry_point>

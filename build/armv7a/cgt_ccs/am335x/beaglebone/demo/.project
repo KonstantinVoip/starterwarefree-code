@@ -91,21 +91,21 @@
 			<type>1</type>
 			<locationURI>PARENT-6-PROJECT_LOC/examples/beaglebone/demo/cm3wkup_proxy.c</locationURI>
 		</link>
-                <link>
-                        <name>demoDvfs.c</name>
-                        <type>1</type>
-                        <locationURI>PARENT-6-PROJECT_LOC/examples/beaglebone/demo/demoDvfs.c</locationURI>
-                </link>
+		<link>
+			<name>demoDvfs.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/examples/beaglebone/demo/demoDvfs.c</locationURI>
+		</link>
 		<link>
 			<name>demoEnet.c</name>
 			<type>1</type>
 			<locationURI>PARENT-6-PROJECT_LOC/examples/beaglebone/demo/demoEnet.c</locationURI>
 		</link>
-                <link>
-                        <name>demoGpio.c</name>
-                        <type>1</type>
-                        <locationURI>PARENT-6-PROJECT_LOC/examples/beaglebone/demo/demoGpio.c</locationURI>
-                </link>
+		<link>
+			<name>demoGpio.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/examples/beaglebone/demo/demoGpio.c</locationURI>
+		</link>
 		<link>
 			<name>demoI2c.c</name>
 			<type>1</type>
@@ -146,11 +146,11 @@
 			<type>1</type>
 			<locationURI>PARENT-6-PROJECT_LOC/examples/beaglebone/demo/demoTimer.c</locationURI>
 		</link>
-                <link>
-                        <name>demoUart.c</name>
-                        <type>1</type>
-                        <locationURI>PARENT-6-PROJECT_LOC/examples/beaglebone/demo/demoUart.c</locationURI>
-                </link>
+		<link>
+			<name>demoUart.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/examples/beaglebone/demo/demoUart.c</locationURI>
+		</link>
 		<link>
 			<name>fat_mmcsd.c</name>
 			<type>1</type>
@@ -183,11 +183,6 @@
 		</link>
 		<link>
 			<name>Debug/demo.out</name>
-			<type>1</type>
-			<locationURI>EXTERNAL_BUILD_ARTIFACT</locationURI>
-		</link>
-		<link>
-			<name>Release/demo.out</name>
 			<type>1</type>
 			<locationURI>EXTERNAL_BUILD_ARTIFACT</locationURI>
 		</link>

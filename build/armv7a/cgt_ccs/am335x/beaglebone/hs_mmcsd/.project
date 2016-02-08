@@ -82,6 +82,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>crc16.c</name>
+			<type>1</type>
+			<locationURI>PARENT-6-PROJECT_LOC/third_party/xmodem/crc16.c</locationURI>
+		</link>
+		<link>
 			<name>fat_mmcsd.c</name>
 			<type>1</type>
 			<locationURI>PARENT-6-PROJECT_LOC/third_party/fatfs/port/fat_mmcsd.c</locationURI>
@@ -91,16 +96,6 @@
 			<type>1</type>
 			<locationURI>PARENT-6-PROJECT_LOC/third_party/fatfs/src/ff.c</locationURI>
 		</link>
-                <link>
-                        <name>xmodem.c</name>
-                        <type>1</type>
-                        <locationURI>PARENT-6-PROJECT_LOC/third_party/xmodem/xmodem.c</locationURI>
-                </link>
-                <link>
-                        <name>crc16.c</name>
-                        <type>1</type>
-                        <locationURI>PARENT-6-PROJECT_LOC/third_party/xmodem/crc16.c</locationURI>
-                </link>
 		<link>
 			<name>hs_mmcsd_fs.c</name>
 			<type>1</type>
@@ -112,12 +107,12 @@
 			<locationURI>PARENT-6-PROJECT_LOC/examples/beaglebone/hs_mmcsd/hs_mmcsd_rw.c</locationURI>
 		</link>
 		<link>
-			<name>Debug/hsMmcSdRw.out</name>
+			<name>xmodem.c</name>
 			<type>1</type>
-			<locationURI>EXTERNAL_BUILD_ARTIFACT</locationURI>
+			<locationURI>PARENT-6-PROJECT_LOC/third_party/xmodem/xmodem.c</locationURI>
 		</link>
 		<link>
-			<name>Release/hsMmcSdRw.out</name>
+			<name>Debug/hsMmcSdRw.out</name>
 			<type>1</type>
 			<locationURI>EXTERNAL_BUILD_ARTIFACT</locationURI>
 		</link>

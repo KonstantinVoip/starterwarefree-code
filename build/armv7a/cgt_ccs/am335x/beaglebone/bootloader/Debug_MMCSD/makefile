@@ -6,9 +6,6 @@ SHELL = cmd.exe
 
 CG_TOOL_ROOT := C:/ti/ccsv6/tools/compiler/arm_5.1.6
 
-GEN_OPTS__FLAG := 
-GEN_CMDS__FLAG := 
-
 ORDERED_OBJS += \
 "./bl_init.obj" \
 "./bl_main.obj" \
@@ -153,7 +150,6 @@ C:/Share/starterwarefree-code/binary/armv7a/cgt_ccs/am335x/beaglebone/bootloader
 	"C:/ti/ccsv6/tools/compiler/arm_5.1.6/bin/armhex"  -o "../../../../../../../binary/armv7a/cgt_ccs/am335x/beaglebone/bootloader/Debug_MMCSD/boot.bin" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
-	@$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
