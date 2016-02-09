@@ -217,7 +217,7 @@ int main(void)
     EVMMACAddrGet(1, lwipIfPort2.macArray); 
 
     AintcCPSWIntrSetUp();
-    DelayTimerSetup();
+    //DelayTimerSetup();
 
     ConsoleUtilsPrintf("\n\rStarterWare Ethernet Echo Application. \n\r\n\r" );
    

@@ -1194,8 +1194,9 @@ cpswif_phy_autoneg(struct cpswinst *cpswinst, u32_t port_num, u32_t adv) {
                        cpswinst->port[port_num -1].phy_addr,
                        &adv_val, &gig_adv_val) == TRUE) {
     while (aut_neg_cnt) {
-      delay(50);
-      auto_stat = PhyAutoNegStatusGet(cpswinst->mdio_base,
+      //delay(50); 50 millisecond      skd_patch
+    	syl_Sysdelay(50);
+    	auto_stat = PhyAutoNegStatusGet(cpswinst->mdio_base,
                                       cpswinst->port[port_num -1].phy_addr);
       if (TRUE == auto_stat) {
         break;
@@ -1323,8 +1324,10 @@ cpswif_phy_forced(struct cpswinst *cpswinst, u32_t port_num, u32_t speed,
   if (TRUE == (PhyLinkStatusGet(cpswinst->mdio_base,
                cpswinst->port[port_num - 1].phy_addr, 1000))) {
    while (frc_stat_cnt) {
-      delay(50);
-      /* Check if PHY link is there or not */
+      //delay(50);             //skd_patch
+	   syl_Sysdelay(50);
+
+	   /* Check if PHY link is there or not */
       frc_stat = (PhyLinkStatusGet(cpswinst->mdio_base,
                   cpswinst->port[port_num - 1].phy_addr, 1000));
 
@@ -1344,8 +1347,9 @@ cpswif_phy_forced(struct cpswinst *cpswinst, u32_t port_num, u32_t speed,
   if (PhyConfigure(cpswinst->mdio_base, cpswinst->port[port_num -1].phy_addr,
                    speed_val, duplex_val)) {
     while (frc_stat_cnt) {
-      delay(50);
-      frc_stat = PhyLinkStatusGet(cpswinst->mdio_base,
+      //delay(50);         //skd_patch
+    	syl_Sysdelay(50);
+    	frc_stat = PhyLinkStatusGet(cpswinst->mdio_base,
                            cpswinst->port[port_num - 1].phy_addr, 1000);
 
       if (1 == frc_stat) {
@@ -1443,8 +1447,9 @@ cpswif_autoneg_config(u32_t inst_num, u32_t port_num) {
                       cpswinst->port[port_num -1].phy_addr,
                       &adv_val, &gig_adv_val) == TRUE) {
     while(aut_neg_cnt) {
-      delay(50);
-      auto_stat = PhyAutoNegStatusGet(cpswinst->mdio_base,
+      //delay(50);      //skd_patch
+    	syl_Sysdelay(50);
+    	auto_stat = PhyAutoNegStatusGet(cpswinst->mdio_base,
                                       cpswinst->port[port_num -1].phy_addr);
       if(TRUE == auto_stat) {
         break;
@@ -1941,8 +1946,8 @@ cpswif_inst_init(struct cpswportif *cpswif){
 
   /* Initialize MDIO */
   MDIOInit(cpswinst->mdio_base, MDIO_FREQ_INPUT, MDIO_FREQ_OUTPUT);
-  delay(1);
-
+  //delay(1);         //skd_patch
+  syl_Sysdelay(1);
   CPSWALEInit(cpswinst->ale_base);
 
   /* Set the port 0, 1 and 2 states to FORWARD */

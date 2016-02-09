@@ -338,7 +338,7 @@ int main(void)
     EVMMACAddrGet(1, lwipIfPort2.macArray); 
 
     AintcCPSWIntrSetUp();
-    DelayTimerSetup();
+    //DelayTimerSetup();  у меня нет функции setup. таймер
 
     ConsoleUtilsPrintf("\n\rStarterWare Ethernet Application. Access the"
              " embedded web page using http://<ip address assigned>/index.html"
