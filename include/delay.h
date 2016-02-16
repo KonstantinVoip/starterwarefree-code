@@ -8,7 +8,7 @@
 #define _DELAY_H_
 
 //Работа с Таймерами ARM3358 всего у нас 8 таймеров.
-//таймер миллисекунд
+//таймер задержки миллисекунды
 extern  void syl_Sysdelay(unsigned int milliSec);
 extern  void syl_dtimer2_init(void);
 
